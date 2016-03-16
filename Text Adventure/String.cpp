@@ -1,6 +1,6 @@
 #include "String.h"
 #include <iostream>
-//#include <string>
+
 
 using namespace std;
 
@@ -126,21 +126,23 @@ char String::upperCase()
 int String::subStringCheck(char* string)
 {
 	//	 int index = 0;
+	int length = Length();
 
 	for (int i = 0; i < Length(); i++)
 	{
 		int j = 0;
 
-		while (getCharacter(i) == string[j])
+		while (m_string[i] == string[j])
 		{
 			j++;
 			i++;
-			if (j = strlen(string))
+			if (j == strlen(string))
 			{
 				return i - j;
 			}
 		}
 	}
+	return -1;
 }
 int String::subStringCheckIndex(String c, int start) // 10 The ability to find a sub-string within the string class, starting from a certain index within the string
 
@@ -159,91 +161,80 @@ int String::subStringCheckIndex(String c, int start) // 10 The ability to find a
 				if (m_string[i+j] == c.getCharacter(j))
 				{
 					IsTrue = true;
+					j++;
 				}
 				else
 				{
 					IsTrue = false;
+					j = 1;
 					break;
 				}
-				j++;
+				
+				//i++;
 			}
+			if (IsTrue==true) {
+				break;
+			}
+			
+			
 			// loops done and all are the same
-			break;
 		}
 		else
 		{
 			IsTrue = false;
+			
 		}
 		i++;
 	}
-	return i;
+	if (IsTrue == true)
+	{
+		return i;
+	}
+	else 
+	{
+		return -1;
+	}
 }
 
-
+const int String::Length(std::string input)
+{
+	int index = 0;
+	while (input[index] != '\0')
+	{
+		index++;
+	}
+	return index;
+}
 	 
 char String::stringReplace(String c, int start)// 11 The ability to replace a sub - string found within the string with a different sub - string
 {
 	return 0;
 }
 
-void String::setString()
+void String::setString()  // 12 The ability to set the string to an input C - style string
 {
+	std::string test;
+	std::getline(std::cin, test);
+	int length = Length(test);
+	char* _test = new char[length +1];
+	
+	for (int i = 0; i <= length;  i++)
+	{
+		_test[i] = test[i];
+	}
 
-	String test;
-	getline(std::cin, test);
-	int length = strlen(test);
-
+	_test[length] = '\0';
 
 	if (m_string != nullptr)
 	{
 		delete[] m_string;
 	}
-	//m_string = temp;
+
+	m_string = _test;
+
 }
 
 
-
-	//(N_String, String.GetString());
-	//.r
-	//strcat(N_String, m_string);
-
-	//if (m_string != nullptr)
-	//{
-	//	delete[] m_string;
-	//}
-	//m_string = N_String;
-
-
-	//StringOne = "Hello, this is a string"
-	//If you want to replace "this is a" with "this is not a"
-	//the could should look something like:
-	//StringOne.Replace(7, 9, "this is not a")
-
-
-
-	//int index = 0;
-
-
-	 //	// "Hello y0u\0"
-	 //	// find = "y0u\0#####"
-	 //	// "olle#"
-
-	 //int index = find - m_string;
-
-	 //	// index = 6
-	 //	// strlen(m_string) = 9
-	 //	// strlen(string) = 3
-	 //	// strlen("olleh") = 5
-	 //	// 9 - 3 + 5 = 11
-	 //	// 11 > 9?
-	 //	// "Hello olleh\0"
-
-	 //	//strncpy(find, "olleh", 5);
-	 //}
-
-
-
-//sets m_string to equal the null pointer
 String::String()
 {
 	m_string = nullptr;

@@ -1,4 +1,7 @@
 #pragma once
+
+#include <string>
+
 class String 
 {
 	char* m_string; 
@@ -8,6 +11,8 @@ public:
 	//const char thisexample() const;
 
 	const int Length();  ////1. The ability to query the string’s length, returning an integer
+
+	const int Length(std::string input);
 
 	const char getCharacter(int index); //2. The ability to access a character at a certain index within the string class
 
