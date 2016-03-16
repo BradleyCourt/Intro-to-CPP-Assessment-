@@ -24,11 +24,11 @@ using namespace std;
 
  String::String(String& string) 
  {
-	 char* newString = new char[string.Length() + 1];
+	 char* newString = new char[string.length() + 1];
 	 newString[0] = '\0';
 	 //strcpy(newString, string);
 	 //make a loop that iterates through all character values, from index 0 to \0
-	 for (int i = 0; i < string.Length(); i++) {
+	 for (int i = 0; i < string.length(); i++) {
 		 newString[i] = string.getCharacter(i);
 		 newString[i+1] = '\0';
 	 }
@@ -36,7 +36,7 @@ using namespace std;
  }
 
  ////1. The ability to query the string’s length, returning an integer
- const int String::Length()
+ const int String::length()
  {
 	 return strlen(m_string);
  }
@@ -48,20 +48,20 @@ using namespace std;
  }
 
  // 3 The ability to compare if the string is the same as another string class
- bool String::Compare(char* String)
+ bool String::compare(char* String)
  {
 	 return strcmp(m_string, String);
 }
 
 
 // 4 The ability to append one string to another
-void String::Append(String String)
+void String::append(String String)
 {
 
-	char* N_String = new char[strlen(m_string) + String.Length() + 1];
+	char* N_String = new char[strlen(m_string) + String.length() + 1];
 	N_String[0] = '\0';
 	strcpy(N_String, m_string);
-	strcat(N_String, String.GetString());
+	strcat(N_String, String.getString());
 
 	if (m_string != nullptr)
 	{
@@ -73,12 +73,12 @@ void String::Append(String String)
 
 }
 // 5 The ability to prepend one string to another
-void String::Prepend(String String)
+void String::prepend(String String)
 {
 
-	char* N_String = new char[strlen(m_string) + String.Length() + 1];
+	char* N_String = new char[strlen(m_string) + String.length() + 1];
 	N_String[0] = '\0';
-	strcpy(N_String, String.GetString());
+	strcpy(N_String, String.getString());
 	strcat(N_String, m_string);
 
 	if (m_string != nullptr)
@@ -89,7 +89,7 @@ void String::Prepend(String String)
 }
 
 // 6 returns a basic c style string
-const char* String::GetString()
+const char* String::getString()
 {
 	return m_string;
 }
@@ -126,9 +126,9 @@ char String::upperCase()
 int String::subStringCheck(char* string)
 {
 	//	 int index = 0;
-	int length = Length();
+	int len = length();
 
-	for (int i = 0; i < Length(); i++)
+	for (int i = 0; i < length(); i++)
 	{
 		int j = 0;
 
@@ -151,12 +151,12 @@ int String::subStringCheckIndex(String c, int start) // 10 The ability to find a
 
 	bool IsTrue = false;
 
-	while (i < Length())	//c = string
+	while (i < length())	//c = string
 	{
 		
 		if (m_string[i] == c.getCharacter(0))
 		{
-			while (j < c.Length())
+			while (j < c.length())
 			{
 				if (m_string[i+j] == c.getCharacter(j))
 				{
@@ -172,7 +172,8 @@ int String::subStringCheckIndex(String c, int start) // 10 The ability to find a
 				
 				//i++;
 			}
-			if (IsTrue==true) {
+			if (IsTrue==true)
+			{
 				break;
 			}
 			
@@ -196,7 +197,7 @@ int String::subStringCheckIndex(String c, int start) // 10 The ability to find a
 	}
 }
 
-const int String::Length(std::string input)
+const int String::length(std::string input)
 {
 	int index = 0;
 	while (input[index] != '\0')
@@ -206,24 +207,51 @@ const int String::Length(std::string input)
 	return index;
 }
 	 
-char String::stringReplace(String c, int start)// 11 The ability to replace a sub - string found within the string with a different sub - string
+void String::stringReplace(String find, char* replace)// 11 The ability to replace a sub - string found within the string with a different sub - string
 {
-	return 0;
+	int flength = length(find.m_string);
+	int index = subStringCheck(find.m_string);
+	int newLength = strlen(m_string) - flength + strlen(replace);
+	int replaceLength = strlen(replace);
+	char* _replacement = new char[newLength + 1];
+	
+	strcpy(_replacement, m_string);
+	for (int i = 0; i < newLength; i++)
+	{
+		if (i < replaceLength)
+		{
+			_replacement[i + index] = replace[i];
+		}
+		if (i < flength)
+		{
+			_replacement[i + index + replaceLength] = m_string[i + index];
+		}
+	
+	}
+	_replacement[newLength] = '\0';
+	if (m_string != nullptr)
+	{
+		delete[] m_string;
+	}
+
+	m_string = _replacement;
+
+	/*stringReplace(find, replace);*/
 }
 
 void String::setString()  // 12 The ability to set the string to an input C - style string
 {
 	std::string test;
 	std::getline(std::cin, test);
-	int length = Length(test);
-	char* _test = new char[length +1];
+	int len = length(test);
+	char* _test = new char[len +1];
 	
-	for (int i = 0; i <= length;  i++)
+	for (int i = 0; i <= len;  i++)
 	{
 		_test[i] = test[i];
 	}
 
-	_test[length] = '\0';
+	_test[len] = '\0';
 
 	if (m_string != nullptr)
 	{
