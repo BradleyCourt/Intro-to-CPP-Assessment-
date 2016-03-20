@@ -39,8 +39,8 @@ cout << anything.upperCase() << " uppercase" << endl;
 //cout << anything.subStringCheckIndex("world", 4);
 //cout << "here";
 
-anything.stringReplace("oh", "ho");
-//anything.print();
+anything.stringReplace("oh", "hello");
+
 
 
 	char nameInput[50];

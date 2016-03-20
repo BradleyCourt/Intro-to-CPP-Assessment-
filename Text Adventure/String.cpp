@@ -169,21 +169,17 @@ int String::subStringCheckIndex(String c, int start) // 10 The ability to find a
 					j = 1;
 					break;
 				}
-				
-				//i++;
+
 			}
 			if (IsTrue==true)
 			{
 				break;
 			}
-			
-			
 			// loops done and all are the same
 		}
 		else
 		{
-			IsTrue = false;
-			
+			IsTrue = false;			
 		}
 		i++;
 	}
@@ -236,7 +232,6 @@ void String::stringReplace(String find, char* replace)// 11 The ability to repla
 
 	m_string = _replacement;
 
-	/*stringReplace(find, replace);*/
 }
 
 void String::setString()  // 12 The ability to set the string to an input C - style string
