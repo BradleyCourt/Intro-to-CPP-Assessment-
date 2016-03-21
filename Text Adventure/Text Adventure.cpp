@@ -8,7 +8,7 @@
 using namespace std;
 
 
-int main()
+int notmain()
 
 {	
 
@@ -19,12 +19,21 @@ String anythingp2 = "yOu...";
 String anythingp3 = "oh";
 String anythingp4 = "Substring Test";
 
-anything.setString();
+anything.setString(); //works when append and prepend are commented out
+
 anything.append(anythingp2);
 anything.prepend(anythingp3);
 
-	
+anything.stringReplace("oh", "Hello");
 
+
+
+//String test = "testing replace string testing";
+//
+//test.stringReplace("testing", "workingnow");
+//
+//test.print();
+// what your lookin foor "oh" what your replacing with "pi"
 
 cout << anything.getCharacter(3) << " get character" <<'\n';
  cout << anything.length() << " get length" << '\n';
@@ -35,11 +44,11 @@ cout << anything.lowerCase() << " lowercase" << endl;
 cout << anything.upperCase() << " uppercase" << endl;
 
 
-//cout << anything.subStringCheck("hello") << " here\n";
-//cout << anything.subStringCheckIndex("world", 4);
+cout << anything.subStringCheck("oh") << " substring check \n";
+cout << anything.subStringCheckIndex("yOu", 0) << "substring check index\n";
 //cout << "here";
 
-anything.stringReplace("oh", "hello");
+
 
 
 
@@ -78,7 +87,7 @@ anything.stringReplace("oh", "hello");
 
 	char userInput[50];
 
-	ifstream in("Room2.txt", ios::in);
+	ifstream in("Room1.txt", ios::in);
 	char ch;
 	while (in)
 	{
@@ -86,8 +95,7 @@ anything.stringReplace("oh", "hello");
 		if (in) cout << ch;
 	}
 	
-	cout <<  "your story begins on what looks to be a desserted road, infornt of you are two  paths, Left, Right ( choose one )" << endl << endl;
-	
+	cout << "Your adventure begins in a deep dark dungeon, there is barely enough light to look around the pleace, you manage to sport an exit towards the right, there seems to be no other way out\n";
 	cin >> userInput;
 
 	//cout << userInput << endl
@@ -96,18 +104,9 @@ anything.stringReplace("oh", "hello");
 	if (strcmp(userInput, "right") == 0) // option 1 right
 	{
 		system("CLS");
-		cout << "The road is blocked by a fallen tree" << endl << endl; // fallen tree, path is blocked
-		cout << " with a score of " << player1.SetScore(0) << endl;
-		//cin >> goback;	
-		
-		
-	}					
-	else if (strcmp(userInput, "left") == 0)// option 1 left
-			{
-				system("CLS");
-				cout << "you turn left, you can see a well further over to the left, to the right of the   well is an abandoned looking house, in between the two you see an aspahlt road in the distance  (left  right  forward)" << endl << endl; // well and abandoned house
-			}
-			else
+		cout << "You enter the room " << endl << endl; // fallen tree, path is blocked
+	}
+	else
 		{
 			cout << "thats not a valid choice m9";
 			getch();

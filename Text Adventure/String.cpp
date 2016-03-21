@@ -218,9 +218,9 @@ void String::stringReplace(String find, char* replace)// 11 The ability to repla
 		{
 			_replacement[i + index] = replace[i];
 		}
-		if (i < flength)
+		if (i + flength + index < strlen(m_string) && i + index + replaceLength < newLength)
 		{
-			_replacement[i + index + replaceLength] = m_string[i + index];
+			_replacement[i + index + replaceLength] = m_string[i + index + flength];
 		}
 	
 	}
@@ -232,6 +232,10 @@ void String::stringReplace(String find, char* replace)// 11 The ability to repla
 
 	m_string = _replacement;
 
+	if (subStringCheck(find.m_string) != -1)
+	{
+		stringReplace(find, replace);
+	}
 }
 
 void String::setString()  // 12 The ability to set the string to an input C - style string
