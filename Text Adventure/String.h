@@ -16,17 +16,22 @@ public:
 
 	const char getCharacter(int index); //2. The ability to access a character at a certain index within the string class
 
+	void setCharacter(int index, char c);
+
 	bool String::compare(char* String);// 3 The ability to compare if the string is the same as another string class
 
 	void append(String String); // 4 The ability to append one string to another
+
+	void append(char * String);
 
 	void prepend(String String); // 5 The ability to prepend one string to another
 
 	const char* getString();// 6 returns a basic c style string
 
-	char String::lowerCase(); // 7 The ability to convert the string to a duplicate containing all lowercase letters
+	String String::lowerCase(); // 7 The ability to convert the string to a duplicate containing all lowercase letters
 
-	char String::upperCase(); // 8 The ability to convert the string to a duplicate containing all uppercase letters
+	
+	String upperCase(); // 8 The ability to convert the string to a duplicate containing all uppercase letters
 
 	int String::subStringCheck(char* string); // 9 The ability to find a sub-string within the string class
 

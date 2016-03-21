@@ -47,6 +47,11 @@ using namespace std;
 	 return m_string[index];
  }
 
+ void String::setCharacter(int index, char c)
+ {
+	 m_string[index] = c;
+ }
+
  // 3 The ability to compare if the string is the same as another string class
  bool String::compare(char* String)
  {
@@ -62,6 +67,23 @@ void String::append(String String)
 	N_String[0] = '\0';
 	strcpy(N_String, m_string);
 	strcat(N_String, String.getString());
+
+	if (m_string != nullptr)
+	{
+		delete[] m_string;
+	}
+	m_string = N_String;
+
+
+
+}
+void String::append(char* String)
+{
+
+	char* N_String = new char[strlen(m_string) + strlen(String) + 1];
+	N_String[0] = '\0';
+	strcpy(N_String, m_string);
+	strcat(N_String, String);
 
 	if (m_string != nullptr)
 	{
@@ -95,31 +117,29 @@ const char* String::getString()
 }
 
 // 7 The ability to convert the string to a duplicate containing all lowercase letters
-char String::lowerCase()
+String String::lowerCase()
 {
 	int i = 0;
-	char c;
-	while (m_string[i] >= '\0')
+	//char* c = "a";
+	while (m_string[i] != '\0')
 	{
-		c = m_string[i];
-		putchar(tolower(c));
+		setCharacter(i, tolower(m_string[i]));
 		i++;
 	}
-	return c;
+	return *this;
 }
 
 // 8 The ability to convert the string to a duplicate containing all uppercase letters
-char String::upperCase()
+String String::upperCase()
 {
 	int i = 0;
-	char c;
-	while (m_string[i] >= '\0')
+	
+	while (m_string[i] != '\0')
 	{
-		c = m_string[i];
-		putchar(toupper(c));
+		setCharacter(i, toupper(m_string[i]));
 		i++;
 	}
-	return c;
+	return *this;
 }
 
 // 9 The ability to find a sub-string within the string class

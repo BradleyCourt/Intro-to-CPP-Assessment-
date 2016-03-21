@@ -19,12 +19,12 @@ String anythingp2 = "yOu...";
 String anythingp3 = "oh";
 String anythingp4 = "Substring Test";
 
-anything.setString(); //works when append and prepend are commented out
+//anything.setString(); //works when append and prepend are commented out
 
 anything.append(anythingp2);
 anything.prepend(anythingp3);
 
-anything.stringReplace("oh", "Hello");
+//anything.stringReplace("oh", "Hello");
 
 
 
@@ -40,8 +40,8 @@ cout << anything.getCharacter(3) << " get character" <<'\n';
 
 
 	
-cout << anything.lowerCase() << " lowercase" << endl;
-cout << anything.upperCase() << " uppercase" << endl;
+cout << (anything.lowerCase()).getString() << " lowercase" << endl;
+cout << (anything.upperCase()).getString() << " uppercase" << endl;
 
 
 cout << anything.subStringCheck("oh") << " substring check \n";
@@ -94,7 +94,6 @@ cout << anything.subStringCheckIndex("yOu", 0) << "substring check index\n";
 		in.get(ch);
 		if (in) cout << ch;
 	}
-	
 	cout << "Your adventure begins in a deep dark dungeon, there is barely enough light to look around the pleace, you manage to sport an exit towards the right, there seems to be no other way out\n";
 	cin >> userInput;
 
