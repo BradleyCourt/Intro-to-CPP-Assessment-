@@ -8,50 +8,9 @@
 using namespace std;
 
 
-int notmain()
+int main()
 
 {	
-
-	
-
-String anything = " IT'S ";
-String anythingp2 = "yOu...";
-String anythingp3 = "oh";
-String anythingp4 = "Substring Test";
-
-//anything.setString(); //works when append and prepend are commented out
-
-anything.append(anythingp2);
-anything.prepend(anythingp3);
-
-//anything.stringReplace("oh", "Hello");
-
-
-
-//String test = "testing replace string testing";
-//
-//test.stringReplace("testing", "workingnow");
-//
-//test.print();
-// what your lookin foor "oh" what your replacing with "pi"
-
-cout << anything.getCharacter(3) << " get character" <<'\n';
- cout << anything.length() << " get length" << '\n';
-
-
-	
-cout << (anything.lowerCase()).getString() << " lowercase" << endl;
-cout << (anything.upperCase()).getString() << " uppercase" << endl;
-
-
-cout << anything.subStringCheck("oh") << " substring check \n";
-cout << anything.subStringCheckIndex("yOu", 0) << "substring check index\n";
-//cout << "here";
-
-
-
-
-
 	char nameInput[50];
 	char areYouSure[20];
 	Player player1;
@@ -94,10 +53,8 @@ cout << anything.subStringCheckIndex("yOu", 0) << "substring check index\n";
 		in.get(ch);
 		if (in) cout << ch;
 	}
-	cout << "Your adventure begins in a deep dark dungeon, there is barely enough light to look around the pleace, you manage to sport an exit towards the right, there seems to be no other way out\n";
+	cout << "Your adventure begins in a deep dark dungeon, there is barely enough light to look around the pleace, you manage to sport an exit towards the right, there seems to be no other way out for now\n";
 	cin >> userInput;
-
-	//cout << userInput << endl
 
 	// Is userInput == "right"
 	if (strcmp(userInput, "right") == 0) // option 1 right
@@ -106,34 +63,9 @@ cout << anything.subStringCheckIndex("yOu", 0) << "substring check index\n";
 		cout << "You enter the room " << endl << endl; // fallen tree, path is blocked
 	}
 	else
-		{
-			cout << "thats not a valid choice m9";
-			getch();
-		}
-	
-	cin >> userInput;
-	 if (strcmp(userInput, "left") == 0)// option 1 left
 	{
-
-		system("CLS");
-		cout << " you look deep into the well, unfortunately you look a bit too deep and fall    in, some water and debris break your fall" << endl << endl; // well and abandoned house
+		cout << "invalid choice\n";
 	}
-	else if (strcmp(userInput, "right") == 0) // option 2 right
-	{
-		system("CLS");
-		cout << "You entered the abandoned house, you ponder to yourself why you would enter such a place" << endl << endl;
-	}
-	else if (strcmp(userInput, "forward") == 0)// option 2 forward
-	{
-		system("CLS");
-		cout << "you walk up and onto the asphalt road like a complete idiot, and got hit by a   car, good going your dead" << endl << endl; //DEATH
-	}
-	else
-	{
-		cout << "thats not a valid choice m9";
-	}
-
-
 	
 
 

@@ -1,6 +1,15 @@
- _________
+ ___   ___
 |         |
+|       __|
+|      |  | 
+  *    |C |   
+  *    |S |  
+|      |L | 
+|      |__|  
 |         |
-|         |
-| *         
-| *        
+|___   ___|
+CONSOLE ROOM
+
+//CONSOLE, REQUIRES
+// SECRET CODE
+// CODE = SPAGHETTIO's

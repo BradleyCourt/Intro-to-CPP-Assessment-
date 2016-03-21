@@ -77,7 +77,7 @@ void test()
 }
 
 
-int main()
+int notmain()
 {
 	test();
 	system("pause");
