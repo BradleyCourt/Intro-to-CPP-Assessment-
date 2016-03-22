@@ -8,8 +8,9 @@
 |         |  
 |    **   |
 |___   ___|
+NORTH HALLLWAY
+
 // ABOVE ROOM2
 // ROOM, FIRST
-// ENEMY ENCOUNTER
-
+// Dark Wizard enemy
   

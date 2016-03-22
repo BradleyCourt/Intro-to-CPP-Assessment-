@@ -28,13 +28,8 @@ int main()
 
 	char userInput[50];
 	char password[10];
-	ifstream Room1("Room1.txt", ios::in);
-	char ch;
-	while (Room1)
-	{
-		Room1.get(ch);
-		if (Room1) cout << ch;
-	}
+
+	
 	cout << "\n Your adventure begins in a dungeon like area, its dark but you can still see, there only seems to be one exit to the east of the room, you do however notice a panel on the wall.\n";
 	cout << "\n your options are, look, right";
 	while (true)
@@ -54,6 +49,7 @@ int main()
 			else if (hasLetter1 == true)
 			{
 
+				system("CLS");
 
 				cout << "\nYou enter the next room, it appears to be much brighter, you see an open door to the north and another closed to the south, most noteable of all though is a console, \n" << endl << endl;
 				cout << "\nyou currently have one letter, 'O'\n";
@@ -61,14 +57,6 @@ int main()
 			}
 		}
 
-		system("CLS");
-		ifstream Room2("Room2.txt", ios::in);
-		char ch;
-		while (Room2)
-		{
-			Room2.get(ch);
-			if (Room2) cout << ch;
-		}
 
 		if (input2.compare(userInput) == 0)  // Look at the panel
 		{
@@ -100,10 +88,11 @@ int main()
 				cout << "access granted";
 				cout << "\n while pondering to yourself about how insecure the code was, a door has opened up infront of you with sunlight beaming out of it";
 				cout << " type walkTowards";
+				cin >> userInput;
+
 				if (input2.compare(userInput) == 0)
 				{
-					Room2.close();
-
+					cout << "fuck you";
 				}
 			}
 			else
