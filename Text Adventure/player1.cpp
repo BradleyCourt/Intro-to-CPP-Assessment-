@@ -1,21 +1,22 @@
-#include "player1.h"
-#include <iostream>
+#include "Player1.h"
 
-void Player::SetName(char name[20])
-{
-	strcpy(m_name, name);
-}
-char Player::GetName()
-{
-	return 0;
-}
-char* GetName(char name[])
-{
-	return name;
-};
 
-int Player::SetScore(int score = 0)
+Player1::Player1()
 {
-	m_score = score;
-	return score;
+	
+}
+
+
+
+Player1::~Player1()
+{
+}
+
+void Player1::attack(Character & target)
+{
+	{
+		cout << "Player1 attacked for " << m_damage << '\n';
+
+		target.Damage(m_damage);
+	}
 }

@@ -145,14 +145,18 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="player1.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="Darkwizard.h" />
+    <ClInclude Include="Player1.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="String.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Text Adventure.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="player1.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Darkwizard.cpp" />
+    <ClCompile Include="Player1.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="String.cpp" />
     <ClCompile Include="Testing.cpp" />

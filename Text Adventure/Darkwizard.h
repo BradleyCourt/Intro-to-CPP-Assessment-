@@ -3,14 +3,15 @@
 #include <iostream>
 #include "String.h"
 
+
 using namespace std;
 
-class Player1: public Character
+class Darkwizard: public Character
 {
 public:
 	void attack(Character& target);
-
-	Player1();
-	~Player1();
+	
+	Darkwizard();
+	~Darkwizard();
 };
 

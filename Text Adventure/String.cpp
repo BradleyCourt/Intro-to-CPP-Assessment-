@@ -41,6 +41,14 @@ using namespace std;
 	 return strlen(m_string);
  }
 
+ const bool String::operator==(String& str)
+ {
+	 return false;
+ }
+
+
+
+
  //2. The ability to access a character at a certain index within the string class
  const char String::getCharacter(int index)
  {

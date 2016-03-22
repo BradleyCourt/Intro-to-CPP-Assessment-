@@ -1,72 +1,118 @@
 #include "stdafx.h"
 #include <iostream>
 #include <conio.h>
-#include "Text Adventure.h"
-#include "player1.h"
+//#include "Text Adventure.h"
 #include "String.h"
 #include <fstream>
+#include "Character.h"
+#include "Player1.h"
+#include "Darkwizard.h"
+
 using namespace std;
-
-
 int main()
 
 {	
-	char nameInput[50];
-	char areYouSure[20];
-	Player player1;
-	cout << "please enter username " << endl;
-	cin >> nameInput;
-	player1.SetName(nameInput) ;
+	Player1 player; // inherited from character
+	Darkwizard enemy; // inherited from character
 
-	cout << "your user name is ";
-	//cout << player1.GetName() << endl;
-	cout << nameInput;
-	cout << " Are you happy with your choice, yes or no ";
+	player.attack(enemy);
 
-	//myfile.close();
-
-	cin >> areYouSure;
+	enemy.attack(player);
 	
+	
+	bool correctPassword = false;
+	bool hasLetter1 = false;
+	bool hasLetter2 = false;
+	bool hasLetter3 = false;
 
-	if (strcmp(areYouSure, "yes") == 0)
-	{
-		cout << "your good to go, good luck" << endl << endl;
-	}
-	else if (strcmp(areYouSure, "no")==0)
-	{
-		//User();
-	}
-	else
-	{
-		cout << "I dont speak that language";
-		getch();
-	}
-
-	//return player1;
 
 	char userInput[50];
-
-	ifstream in("Room1.txt", ios::in);
+	char password[10];
+	ifstream Room1("Room1.txt", ios::in);
 	char ch;
-	while (in)
+	while (Room1)
 	{
-		in.get(ch);
-		if (in) cout << ch;
+		Room1.get(ch);
+		if (Room1) cout << ch;
 	}
-	cout << "Your adventure begins in a deep dark dungeon, there is barely enough light to look around the pleace, you manage to sport an exit towards the right, there seems to be no other way out for now\n";
-	cin >> userInput;
+	cout << "\n Your adventure begins in a dungeon like area, its dark but you can still see, there only seems to be one exit to the east of the room, you do however notice a panel on the wall.\n";
+	cout << "\n your options are, look, right";
+	while (true)
+	{
+		String input1("right");
+		String input2("look");
+		cin >> userInput;
+		if (input1.compare(userInput) == 0) // option 1 right
+		{
+			//system("CLS");
+			Room1.close();
+			if (hasLetter1 == false)
+			{
+				cout << "\nyou should probably look at the panel first\n";
 
-	// Is userInput == "right"
-	if (strcmp(userInput, "right") == 0) // option 1 right
-	{
+			}
+			else if (hasLetter1 == true)
+			{
+
+
+				cout << "\nYou enter the next room, it appears to be much brighter, you see an open door to the north and another closed to the south, most noteable of all though is a console, \n" << endl << endl;
+				cout << "\nyou currently have one letter, 'O'\n";
+				break;
+			}
+		}
+
 		system("CLS");
-		cout << "You enter the room " << endl << endl; // fallen tree, path is blocked
-	}
-	else
+		ifstream Room2("Room2.txt", ios::in);
+		char ch;
+		while (Room2)
+		{
+			Room2.get(ch);
+			if (Room2) cout << ch;
+		}
+
+		if (input2.compare(userInput) == 0)  // Look at the panel
+		{
+
+			cout << "\nYou peer a the panel and notice the letter 'O'? how peculiar, better take note of it anyway\n";
+			hasLetter1 = true;
+
+
+		}
+
+		
+		}
+	while (true)
 	{
-		cout << "invalid choice\n";
+		String answer("WOOF");
+		String input1("checkConsole");
+		String input2("walkTowards");
+
+		cin >> userInput;
+		if (input1.compare(userInput) == 0)  // Look at the panel
+		{
+			cout << "you check the console\n";
+			cout << "what is the password?";
+			
+			cin >> password;
+			if (strcmp(password, answer.getString()) == 0)
+			{
+				correctPassword == true;
+				cout << "access granted";
+				cout << "\n while pondering to yourself about how insecure the code was, a door has opened up infront of you with sunlight beaming out of it";
+				cout << " type walkTowards";
+				if (input2.compare(userInput) == 0)
+				{
+					Room2.close();
+
+				}
+			}
+			else
+			{
+				cout << "maybe you should find the parts of the code first";
+			}
+			
+		}
 	}
-	
 
 
 
