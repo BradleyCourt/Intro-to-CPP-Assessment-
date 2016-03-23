@@ -4,9 +4,13 @@ class Character
 {
 public:
 
-	int GetHealth()
+	int getHealth()
 	{
 		return m_health;
+	}
+	int setHealth()
+	{
+		return  m_health = 150;
 	}
 	int getDamage()
 	{
@@ -24,6 +28,9 @@ public:
 
 	virtual void Damage(int damage);
 
+	virtual void setHealth(int health);
+	
+
 	Character();
 
 	virtual ~Character();
@@ -31,5 +38,6 @@ public:
 protected:
 	int m_health;
 	int m_damage;
+	int m_setHealth;
 	String m_name;
 };

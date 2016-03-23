@@ -7,6 +7,7 @@
 #include "Character.h"
 #include "Player1.h"
 #include "Darkwizard.h"
+#include <time.h>
 
 using namespace std;
 int main()
@@ -14,11 +15,57 @@ int main()
 {	
 	Player1 player; // inherited from character
 	Darkwizard enemy; // inherited from character
+	srand(time(NULL));
+	int temp;
+	while (true)
+	{
+	temp = rand() % (10 - 1) + 1;
+		if (temp == 1)
+		{
+			if (player.getHealth() <= 0)
+			{
+				cout << "Dark Wizard won the fight, Gane over";
+				
+				break;
+			}
 
-	player.attack(enemy);
+			player.attack(enemy);
+			player.getHealth();
+			if (enemy.getHealth() <= 0)
+			{
+				cout << "Player won the fight, your base attack has increased to 17";
+				player.setHealth();
+				cout << '\n' << "current hp " << player.getHealth();
+			
+		
+				break;
+			}
+			enemy.attack(player);
+			enemy.getHealth();		
+			cout << "Crit" << endl;
+		}
+		else
+		{
+			if (player.getHealth() <= 0)
+			{
+				cout << "Dark Wizard won the fight, Gane over";
+				break;
+			}
 
-	enemy.attack(player);
-	
+			player.attack(enemy);
+			player.getHealth();
+			if (enemy.getHealth() <= 0)
+			{
+				cout << "Player won the fight, your base attack has increased to 17";
+				player.setHealth();
+				cout << '\n' << "current hp " << player.getHealth() << '\n';
+				break;
+			}
+			enemy.attack(player);
+			enemy.getHealth();
+			cout << "Basic Attack" << endl;
+		}	
+	}
 	
 	bool correctPassword = false;
 	bool hasLetter1 = false;
@@ -40,7 +87,6 @@ int main()
 		if (input1.compare(userInput) == 0) // option 1 right
 		{
 			//system("CLS");
-			Room1.close();
 			if (hasLetter1 == false)
 			{
 				cout << "\nyou should probably look at the panel first\n";
