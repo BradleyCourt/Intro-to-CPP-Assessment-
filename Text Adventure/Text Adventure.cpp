@@ -10,6 +10,7 @@
 #include <time.h>
 
 using namespace std;
+
 int main()
 
 {	
@@ -19,52 +20,31 @@ int main()
 	int temp;
 	while (true)
 	{
-	temp = rand() % (10 - 1) + 1;
-		if (temp == 1)
-		{
-			if (player.getHealth() <= 0)
-			{
-				cout << "Dark Wizard won the fight, Gane over";
-				
-				break;
-			}
+	
 
-			player.attack(enemy);
-			player.getHealth();
-			if (enemy.getHealth() <= 0)
-			{
-				cout << "Player won the fight, your base attack has increased to 17";
-				player.setHealth();
-				cout << '\n' << "current hp " << player.getHealth();
-			
 		
-				break;
-			}
-			enemy.attack(player);
-			enemy.getHealth();		
-			cout << "Crit" << endl;
-		}
-		else
+		if (player.getHealth() <= 0)
 		{
-			if (player.getHealth() <= 0)
-			{
-				cout << "Dark Wizard won the fight, Gane over";
-				break;
-			}
+			cout << "Dark Wizard won the fight, Game over";
 
-			player.attack(enemy);
-			player.getHealth();
-			if (enemy.getHealth() <= 0)
-			{
-				cout << "Player won the fight, your base attack has increased to 17";
-				player.setHealth();
-				cout << '\n' << "current hp " << player.getHealth() << '\n';
-				break;
-			}
-			enemy.attack(player);
-			enemy.getHealth();
-			cout << "Basic Attack" << endl;
-		}	
+			system("PAUSE");
+		}
+	//	player.getHealth();
+		player.attack(enemy);
+		
+		if (enemy.getHealth() <= 0)
+		{
+			cout << "Player won the fight, your base attack has increased to 17";
+			player.setHealth();
+			cout << '\n' << "current hp " << player.getHealth();
+
+
+			break;
+		}
+		//enemy.getHealth();
+		enemy.attack(player);
+		
+		
 	}
 	
 	bool correctPassword = false;

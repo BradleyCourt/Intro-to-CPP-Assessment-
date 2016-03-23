@@ -14,11 +14,13 @@ Darkwizard::~Darkwizard()
 void Darkwizard::attack(Character & target)
 {
 	{
-		cout << "DarkWizard attacked for " << m_damage << '\n';
+		int temp3;
+		temp3 = m_damage + rand() % 9 + 1;
+		target.Damage(temp3);
+		cout << "\Dark Wizards remaining Hp" << getHealth() << '\n';
+		cout << "\Dark Wizards magic did " << temp3 << " damage" << '\n';
+		
 
-		target.Damage(m_damage);
-
-		cout << "\n DarkWizard's remaining Hp" << getHealth() << '\n';
-
+	
 	}
 }
