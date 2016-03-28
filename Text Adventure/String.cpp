@@ -36,12 +36,12 @@ using namespace std;
  }
 
  ////1. The ability to query the string’s length, returning an integer
- const int String::length()
+ int String::length () const
  {
 	 return strlen(m_string);
  }
 
- const bool String::operator==(String& str)
+ bool String::operator==(String& str) const
  {
 	 return false;
  }
@@ -50,7 +50,7 @@ using namespace std;
 
 
  //2. The ability to access a character at a certain index within the string class
- const char String::getCharacter(int index)
+ char String::getCharacter(int index) const
  {
 	 return m_string[index];
  }
@@ -221,19 +221,19 @@ int String::subStringCheckIndex(String c, int start) // 10 The ability to find a
 	}
 }
 
-const int String::length(std::string input)
-{
-	int index = 0;
-	while (input[index] != '\0')
-	{
-		index++;
-	}
-	return index;
-}
+//int String::length(string input)
+//{
+//	int index = 0;
+//	while (input[index] != '\0')
+//	{
+//		index++;
+//	}
+//	return index;
+//}
 	 
 void String::stringReplace(String find, char* replace)// 11 The ability to replace a sub - string found within the string with a different sub - string
 {
-	int flength = length(find.m_string);
+	int flength = find.length();
 	int index = subStringCheck(find.m_string);
 	int newLength = strlen(m_string) - flength + strlen(replace);
 	int replaceLength = strlen(replace);
@@ -268,9 +268,9 @@ void String::stringReplace(String find, char* replace)// 11 The ability to repla
 
 void String::setString()  // 12 The ability to set the string to an input C - style string
 {
-	std::string test;
+	string test;
 	std::getline(std::cin, test);
-	int len = length(test);
+	int len = length();
 	char* _test = new char[len +1];
 	
 	for (int i = 0; i <= len;  i++)

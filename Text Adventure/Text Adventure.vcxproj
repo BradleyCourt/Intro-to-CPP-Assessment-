@@ -147,6 +147,8 @@
   <ItemGroup>
     <ClInclude Include="Character.h" />
     <ClInclude Include="Darkwizard.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="map1.h" />
     <ClInclude Include="Player1.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="String.h" />
@@ -156,6 +158,8 @@
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Darkwizard.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="map1.cpp" />
     <ClCompile Include="Player1.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="String.cpp" />

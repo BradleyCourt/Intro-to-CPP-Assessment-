@@ -9,4 +9,4 @@ test 8	uppercase		success 100 %
 test 9	subStringCheck		success 100 % 
 test 10	subStringCheckIndex	success 100 % 
 test 11	stringReplace		success 100 % 
-test 12	SetString		success 100 % 
+test 12	SetString		success 100 %  

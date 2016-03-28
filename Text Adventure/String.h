@@ -10,13 +10,13 @@ public:
 	
 	//const char thisexample() const;
 
-	const int length();  ////1. The ability to query the string’s length, returning an integer
+	int length() const;  ////1. The ability to query the string’s length, returning an integer
 
-	const bool operator== (String& str);
+	bool operator== (String& str) const;
 
-	const int length(std::string input);
+	//int length(std::string input);
 
-	const char getCharacter(int index); //2. The ability to access a character at a certain index within the string class
+	char getCharacter(int index) const; //2. The ability to access a character at a certain index within the string class
 
 	void setCharacter(int index, char c);
 
