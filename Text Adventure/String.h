@@ -43,7 +43,7 @@ public:
 
 	void String::setString(); // 12 The ability to set the string to an input C - style string
 	
-	
+	// operator=
 	
 	
 

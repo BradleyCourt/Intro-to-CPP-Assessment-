@@ -150,6 +150,10 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="map1.h" />
     <ClInclude Include="Player1.h" />
+    <ClInclude Include="puzzleRoom1.h" />
+    <ClInclude Include="Room.h" />
+    <ClInclude Include="Run.h" />
+    <ClInclude Include="startRoom.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="String.h" />
     <ClInclude Include="targetver.h" />
@@ -161,6 +165,10 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="map1.cpp" />
     <ClCompile Include="Player1.cpp" />
+    <ClCompile Include="puzzleRoom1.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="Run.cpp" />
+    <ClCompile Include="startRoom.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="String.cpp" />
     <ClCompile Include="Testing.cpp" />
