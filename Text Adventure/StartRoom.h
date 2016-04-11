@@ -1,13 +1,12 @@
 #pragma once
 #include "Room.h"
-
-class StartRoom : public Room
+class startRoom : public Room
 {
 public:
-	StartRoom();
-	virtual ~StartRoom();
+	startRoom();
+	virtual ~startRoom();
 
-	void TakeInput();
+	virtual void introduction();
 
 
 	virtual void UpdateMap(int &currentRoom);

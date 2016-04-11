@@ -43,7 +43,13 @@ public:
 
 	void String::setString(); // 12 The ability to set the string to an input C - style string
 	
+<<<<<<< HEAD
 	String& operator = (char* text);
+=======
+	// operator=
+	
+	
+>>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
 
 	String(String & string);
 

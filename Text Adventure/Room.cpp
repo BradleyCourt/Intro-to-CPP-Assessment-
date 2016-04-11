@@ -1,4 +1,5 @@
 #include "Room.h"
+<<<<<<< HEAD
 #include "Map.h"
 #include <iostream>
 
@@ -8,6 +9,11 @@ Room::Room()
 {
 	m_textOnEnter = "";
 	
+=======
+Room::Room()
+{
+	m_textOnEnter = "";
+>>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
 }
 
 
@@ -25,6 +31,7 @@ void Room::setEnterText(char* str)
 	m_textOnEnter = str;
 }
 
+<<<<<<< HEAD
 int Room::getPositionx()
 {
 	return m_xCoord;
@@ -36,17 +43,24 @@ int Room::getPositiony()
 }
 
 
+=======
+>>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
 void Room::setPosition(int x, int y)
 {
 	m_xCoord = x;
 	m_yCoord = y;
 }
 
+<<<<<<< HEAD
 void Room::TakeInput()
+=======
+void Room::introduction()
+>>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
 {
 	//Do nothing
 }
 
+<<<<<<< HEAD
 void Room::Introduction()
 {
 	
@@ -86,3 +100,9 @@ bool Room::CanMoveWest()
 	return m_CanMoveWest;
 }
 
+=======
+void Room::puzzle()
+{
+
+}
+>>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
