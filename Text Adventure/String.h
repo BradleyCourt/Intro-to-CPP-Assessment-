@@ -1,6 +1,6 @@
 #pragma once
 
-#include <string>
+#include <string> // used only in Q12
 
 class String 
 {
@@ -43,13 +43,9 @@ public:
 
 	void String::setString(); // 12 The ability to set the string to an input C - style string
 	
-	
-	
-	
+	String& operator = (char* text);
 
 	String(String & string);
-	
-	
 
 	String();
 

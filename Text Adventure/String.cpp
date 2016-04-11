@@ -26,12 +26,12 @@ using namespace std;
  {
 	 char* newString = new char[string.length() + 1];
 	 newString[0] = '\0';
-	 //strcpy(newString, string);
+	 strcpy(newString, string.m_string);
 	 //make a loop that iterates through all character values, from index 0 to \0
-	 for (int i = 0; i < string.length(); i++) {
-		 newString[i] = string.getCharacter(i);
-		 newString[i+1] = '\0';
-	 }
+	 //for (int i = 0; i < string.length(); i++) {
+		// newString[i] = string.getCharacter(i);
+		// newString[i+1] = '\0';
+	 //}
 	 m_string = newString;
  }
 
@@ -268,7 +268,7 @@ void String::stringReplace(String find, char* replace)// 11 The ability to repla
 
 void String::setString()  // 12 The ability to set the string to an input C - style string
 {
-	string test;
+	std::string test;
 	std::getline(std::cin, test);
 	int len = length();
 	char* _test = new char[len +1];
@@ -289,6 +289,21 @@ void String::setString()  // 12 The ability to set the string to an input C - st
 
 }
 
+String & String::operator=(char * text)
+{
+	int len = strlen(text);
+	char* _test = new char[len + 1];
+
+	strcpy(_test, text);
+
+	if (m_string != nullptr)
+	{
+		delete[] m_string;
+	}
+
+	m_string = _test;
+	return *this;
+}
 
 String::String()
 {
