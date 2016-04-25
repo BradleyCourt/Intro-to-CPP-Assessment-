@@ -7,7 +7,6 @@ public:
 	SecondPuzzleRoom();
 	virtual ~SecondPuzzleRoom();
 	void TakeInput();
-	//int Correct();
-	//void RunRoom();
+
 };
 

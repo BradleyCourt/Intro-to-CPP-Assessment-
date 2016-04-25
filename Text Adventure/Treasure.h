@@ -8,9 +8,6 @@ public:
 	Treasure();
 	virtual ~Treasure();
 	void TakeInput();
-	//void loot();
-//	void Treasure();
-	
-	//Room::Money;
+
 };
 

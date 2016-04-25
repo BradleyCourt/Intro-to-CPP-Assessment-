@@ -5,7 +5,6 @@
 #include <fstream>
 #include "Character.h"
 #include "Player.h"
-#include "Darkwizard.h"
 #include <time.h>
 #include "Room.h"
 #include "Map.h"
@@ -30,7 +29,6 @@ Player::~Player()
 
 Map map;
 Player player; // inherited from character
-Darkwizard enemy; // inherited from character
 
 
 void Player::nextRoom(int col, int row, std::vector<Room*> m_map)
@@ -103,52 +101,35 @@ void Player::move(Map map)
 	char userInput[50];
 
 	String input1 = ("North");
-	input1.setString();
-	if (input1.lowerCase().compare("north"))
-	{
-		//	if ((map.pointerToVect()).at(FindRoom(map.pointerToVect())).allowMoveNorth() == true)
-		nextRoom((getCoordX()), (getCoordY() + 1), map.pointerToVect());
-	}
-	if (input1.lowerCase().compare("east"))
-	{
-		nextRoom((getCoordX() + 1), (getCoordY()), map.pointerToVect());
-		//map.pointerToVect()[Map::MapName::PUZZLE1]->Puzzle();
-	}
-	if (input1.lowerCase().compare("south"))
-	{
-		nextRoom((getCoordX()), (getCoordY() - 1), map.pointerToVect());
-	}
-	if (input1.lowerCase().compare("west"))
-	{
-		nextRoom((getCoordX() - 1), (getCoordY()), map.pointerToVect());
-	}
 
-}
-void Player::attack(Character & target)
-{
+	while (true)
 	{
-		char action[50];
-		String input1("Attack");
-		String input2("Dodge");
-		int temp2;
-		temp2 = m_damage + rand() % 9 + 1;
-		cout << "\nPlayer's remaining Hp = " << getHealth() << '\n';
-		cout << "what would you like to do, Attack\n";
-		cout << " DELETE THIS SOON you will automaticly dodge if enemy attack is less than 14\n";
-		cin >> action;
-		if (input1.compare(action))
-			{
-				target.Damage(temp2);
-				cout << "\nPlayer's attack did " << temp2 << " " << " damage" << '\n';
-				//cout << "\nPlayer's remaining Hp = " << getHealth() << '\n';
-			}
-
-		if (target.getHealth() <= 0)
-			{
-				m_damage = 17;
-			}
+		input1.setString();
+		if (input1.lowerCase().compare("north"))
+		{
+			//	if ((map.pointerToVect()).at(FindRoom(map.pointerToVect())).allowMoveNorth() == true)
+			nextRoom((getCoordX()), (getCoordY() + 1), map.pointerToVect());
+			break;
 		}
+		if (input1.lowerCase().compare("east"))
+		{
+			nextRoom((getCoordX() + 1), (getCoordY()), map.pointerToVect());
+			//map.pointerToVect()[Map::MapName::PUZZLE1]->Puzzle();
+			break;
+		}
+		if (input1.lowerCase().compare("south"))
+		{
+			nextRoom((getCoordX()), (getCoordY() - 1), map.pointerToVect());
+			break;
+		}
+		if (input1.lowerCase().compare("west"))
+		{
+			nextRoom((getCoordX() - 1), (getCoordY()), map.pointerToVect());
+			break;
+		}
+		std::cout << "type in a valid answer \n";
 	}
+}
 
 	int Player::getCoordX()
 	{

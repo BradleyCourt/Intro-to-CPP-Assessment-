@@ -23,7 +23,7 @@ void QuizRoom::TakeInput()
 
 	char Answer[50];
 	std::cout << "You passed my puzzle room pretty easily, but can you stand the heat of my quiz  room?\n";
-	std::cout << "\nThere are 5 questions in total can you muster your brain power to get all 5     right? if so they might be something in it for you\n";
+	std::cout << "\nThere are 5 questions in total can you muster your brain power to get all 5 right? if so they might be something in it for you\n";
 	std::cout << "\nRight lets begin, Question 1 What piece in chess has the least value?\n\nBishop\nRook\nPawn\n";
 	String input1;
 	input1.setString();

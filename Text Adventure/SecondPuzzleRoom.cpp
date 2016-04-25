@@ -26,9 +26,12 @@ void SecondPuzzleRoom::TakeInput()
 		if (input1.lowerCase().compare("absenteeism"))
 		{
 			system("CLS");
+			AddMoney(1000);
+			GetMoney();
 			Correct++;
 			std::cout << "\nNice i didnt think youd actually get that one lets try something different";
 			std::cout << '\n' << Correct << " / 3";
+
 		}
 		else
 		{
@@ -36,12 +39,14 @@ void SecondPuzzleRoom::TakeInput()
 			std::cout << "\nnice try, theres still 2 more questions to come";
 			std::cout << '\n' << Correct << " / 3";
 		}
-		std::cout << "\nhow about a math question, those are fun always, find the formula and tell me whats next in this sequence of numbers *3,5,24,575*"; // squared minus 1
+		std::cout << "\nhow about a math question, those are fun always, find the formula and tell me whats next in this sequence of numbers *3,5,24*"; // squared minus 1
 		String input2;
 		input2.setString();
-		if (input2.lowerCase().compare("330624"))
+		if (input2.lowerCase().compare("575"))
 		{
 			system("CLS");
+			AddMoney(1000);
+			GetMoney();
 			Correct++; 
 			std::cout << "\ngreat job, im starting to get impressed";
 			std::cout << '\n' << Correct << " / 3";
@@ -53,12 +58,14 @@ void SecondPuzzleRoom::TakeInput()
 			std::cout << '\n' << Correct << " / 3";
 		}
 		std::cout << "\nfinal question, youll need to think about this one, tis a riddle";
-		std::cout << "\nno matter how hard you look at my face, you wont find 13, what am i";
+		std::cout << "\nno matter how hard you look at my face, you wont find 13, what am i/n";
 		String input3;
 		input3.setString();
 		if (input3.lowerCase().compare("clock"))
 		{
 			system("CLS");
+			AddMoney(1000);
+			GetMoney();
 			Correct++;
 			std::cout << "\nnice i knew you had it in you";
 			std::cout << '\n' << Correct << " / 3";
@@ -69,6 +76,7 @@ void SecondPuzzleRoom::TakeInput()
 			std::cout << "nice attempt twas pretty hard";
 			std::cout << '\n' << Correct << " / 3";
 		}
+		std::cout << "that was pretty difficult exit is to your east, nice going.";
 	}
 	else 
 	{
@@ -80,6 +88,8 @@ void SecondPuzzleRoom::TakeInput()
 		if (input4.lowerCase().compare("define"))
 		{
 			system("CLS");
+			AddMoney(500);
+			GetMoney();
 			Correct++;
 			std::cout << "\ngood start keep it up";
 			std::cout << '\n' << Correct << " / 3";
@@ -97,6 +107,8 @@ void SecondPuzzleRoom::TakeInput()
 		if (input5.lowerCase().compare("operation"))
 		{
 			system("CLS");
+			AddMoney(500);
+			GetMoney();
 			Correct++;
 			std::cout << "\nNice I knew you had it in you!";
 			std::cout << '\n' << Correct << " / 3";
@@ -112,10 +124,12 @@ void SecondPuzzleRoom::TakeInput()
 		input6.setString();
 		if (input6.lowerCase().compare("quadrillion"))
 		{
-		system("CLS");
-		Correct++;
-		std::cout << "\nSweet!";
-		std::cout << '\n' << Correct << " / 3";
+			system("CLS");
+			AddMoney(500);
+			GetMoney();
+			Correct++;
+			std::cout << "\nSweet!";
+			std::cout << '\n' << Correct << " / 3";
 		}
 		else 
 		{
@@ -123,14 +137,6 @@ void SecondPuzzleRoom::TakeInput()
 			std::cout << "\nBetter luck next time";
 			std::cout << '\n' << Correct << " / 3";
 		}
+		std::cout << "well done, the exit is east, good one";
 	}
 }
-//int SecondPuzzleRoom::Correct()
-//{
-//	return 0;
-//}
-//
-//void SecondPuzzleRoom::RunRoom()
-//{
-//	if(Correct == 2)
-//}

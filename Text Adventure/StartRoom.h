@@ -8,9 +8,6 @@ public:
 
 	void TakeInput();
 
-//	virtual void introduction();
-
-
 	virtual void UpdateMap(int &currentRoom);
 };
 

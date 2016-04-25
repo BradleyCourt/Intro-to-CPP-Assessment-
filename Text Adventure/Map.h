@@ -8,6 +8,7 @@
 #include "SecondPuzzleRoom.h"
 #include "StartRoom.h"
 #include "PuzzleRoom1.h"
+#include "EndGame.h"
 
 class Map
 {
@@ -49,6 +50,12 @@ public:
 			SecondPuzzleRoom * tempRoom = new SecondPuzzleRoom();
 			tempRoom->setPosition(2, 2);
 			tempRoom->setEnterText("Room 5* - Second Puzzle Room");
+			m_map.push_back(tempRoom);
+		}
+		{
+			EndGame * tempRoom = new EndGame();
+			tempRoom->setPosition(3, 2);
+			tempRoom->setEnterText("Room 6* - Exit");
 			m_map.push_back(tempRoom);
 		}
 

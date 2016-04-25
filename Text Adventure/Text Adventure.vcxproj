@@ -146,14 +146,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
-    <ClInclude Include="Darkwizard.h" />
+    <ClInclude Include="EndGame.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="map1.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PuzzleRoom.h" />
     <ClInclude Include="QuizRoom.h" />
     <ClInclude Include="Room.h" />
-    <ClInclude Include="Run.h" />
     <ClInclude Include="SecondPuzzleRoom.h" />
     <ClInclude Include="StartRoom.h" />
     <ClInclude Include="stdafx.h" />
@@ -164,14 +163,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="Darkwizard.cpp" />
+    <ClCompile Include="EndGame.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="map1.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PuzzleRoom.cpp" />
     <ClCompile Include="QuizRoom.cpp" />
     <ClCompile Include="Room.cpp" />
-    <ClCompile Include="Run.cpp" />
     <ClCompile Include="SecondPuzzleRoom.cpp" />
     <ClCompile Include="StartRoom.cpp" />
     <ClCompile Include="stdafx.cpp" />
