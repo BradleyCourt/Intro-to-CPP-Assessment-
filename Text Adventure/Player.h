@@ -8,6 +8,8 @@ class Player: public Character
 public:
 	void nextRoom(int col, int row, std::vector<Room*> m_map);
 
+	int currentRoom(std::vector<Room*> m_map);
+
 	int FindRoom(std::vector<Room*> m_map);
 
 	void move(Map map);

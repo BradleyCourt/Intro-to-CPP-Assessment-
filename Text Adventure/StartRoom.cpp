@@ -1,26 +1,26 @@
-#include "startRoom.h"
+#include "StartRoom.h"
 #include <iostream>
 
 
-startRoom::startRoom()
+StartRoom::StartRoom()
 {
 
 }
 
 
-startRoom::~startRoom()
+StartRoom::~StartRoom()
 {
 }
-void startRoom::introduction()
+void StartRoom::TakeInput()
 {
-	std::cout << "*announcer* hello and welcome to the puzzle show starring yours truely, player!\n Lets see how he performs today!";
-	std::cout << "\n" << "Move East to start your puzzling quest throughout your time here on this show!";
+	std::cout << "*announcer* hello and welcome to the puzzle show starring yours truely, player!\nLets see how he performs today!";
+	std::cout << "\n" << "Move East to start your puzzling quest throughout your time here on this show!\n\n";
 	//if userinput == east
 	//{
 	//	currentmap
 	//}
 }
-void startRoom::UpdateMap(int &currentRoom)
+void StartRoom::UpdateMap(int &currentRoom)
 {
 
 }

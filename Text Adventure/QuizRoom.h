@@ -9,8 +9,9 @@ public:
 	virtual ~QuizRoom();
 	int GetCorrect();
 	void TakeInput();
+	
 	//virtual void Quiz();
-	Room::Money;
+	//Room::Money;
 private:
 	static int Correct;
 

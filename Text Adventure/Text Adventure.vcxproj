@@ -149,7 +149,6 @@
     <ClInclude Include="Darkwizard.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="map1.h" />
-<<<<<<< HEAD
     <ClInclude Include="Player.h" />
     <ClInclude Include="PuzzleRoom.h" />
     <ClInclude Include="QuizRoom.h" />
@@ -157,13 +156,6 @@
     <ClInclude Include="Run.h" />
     <ClInclude Include="SecondPuzzleRoom.h" />
     <ClInclude Include="StartRoom.h" />
-=======
-    <ClInclude Include="Player1.h" />
-    <ClInclude Include="puzzleRoom1.h" />
-    <ClInclude Include="Room.h" />
-    <ClInclude Include="Run.h" />
-    <ClInclude Include="startRoom.h" />
->>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="String.h" />
     <ClInclude Include="targetver.h" />
@@ -175,7 +167,6 @@
     <ClCompile Include="Darkwizard.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="map1.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PuzzleRoom.cpp" />
     <ClCompile Include="QuizRoom.cpp" />
@@ -183,13 +174,6 @@
     <ClCompile Include="Run.cpp" />
     <ClCompile Include="SecondPuzzleRoom.cpp" />
     <ClCompile Include="StartRoom.cpp" />
-=======
-    <ClCompile Include="Player1.cpp" />
-    <ClCompile Include="puzzleRoom1.cpp" />
-    <ClCompile Include="Room.cpp" />
-    <ClCompile Include="Run.cpp" />
-    <ClCompile Include="startRoom.cpp" />
->>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="String.cpp" />
     <ClCompile Include="Testing.cpp" />

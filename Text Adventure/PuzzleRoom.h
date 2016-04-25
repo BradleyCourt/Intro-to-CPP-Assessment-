@@ -11,7 +11,7 @@ public:
 	bool RoomDone = false;
 	//virtual void CorrectAnswers();
 	int GetCorrect();
-	Room::Money;
+	//Room::Money;
 private:
 	static int Correct;
 };

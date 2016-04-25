@@ -1,20 +1,14 @@
 #include "Room.h"
-<<<<<<< HEAD
 #include "Map.h"
 #include <iostream>
 
 // Additional headers that weren't required by the class definition
+int Room::Money = 0;
 
 Room::Room()
 {
 	m_textOnEnter = "";
-	
-=======
-Room::Room()
-{
-	m_textOnEnter = "";
->>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
-}
+	}
 
 
 Room::~Room()
@@ -31,7 +25,6 @@ void Room::setEnterText(char* str)
 	m_textOnEnter = str;
 }
 
-<<<<<<< HEAD
 int Room::getPositionx()
 {
 	return m_xCoord;
@@ -41,26 +34,34 @@ int Room::getPositiony()
 {
 	return m_yCoord;
 }
+void Room::setPositiony(int y)
+{
+	m_yCoord = y;
+}
+void Room::setPositionx(int x)
+{
+	m_xCoord = x;
+}
 
 
-=======
->>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
 void Room::setPosition(int x, int y)
 {
 	m_xCoord = x;
 	m_yCoord = y;
 }
 
-<<<<<<< HEAD
-void Room::TakeInput()
-=======
-void Room::introduction()
->>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
+void Room::AddMoney(int amount)
 {
-	//Do nothing
+	Money += amount;
 }
 
-<<<<<<< HEAD
+
+
+void Room::TakeInput()
+{
+
+}
+
 void Room::Introduction()
 {
 	
@@ -100,9 +101,9 @@ bool Room::CanMoveWest()
 	return m_CanMoveWest;
 }
 
-=======
-void Room::puzzle()
+int Room::GetMoney()
 {
-
+	return Money;
 }
->>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
+
+

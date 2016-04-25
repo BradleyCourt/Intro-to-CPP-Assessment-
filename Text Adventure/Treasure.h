@@ -11,6 +11,6 @@ public:
 	//void loot();
 //	void Treasure();
 	
-	Room::Money;
+	//Room::Money;
 };
 

@@ -63,7 +63,7 @@ using namespace std;
  // 3 The ability to compare if the string is the same as another string class
  bool String::compare(char* String)
  {
-	 return strcmp(m_string, String);
+	 return (strcmp(m_string, String) == 0);
 }
 
 
@@ -268,12 +268,12 @@ void String::stringReplace(String find, char* replace)// 11 The ability to repla
 
 void String::setString()  // 12 The ability to set the string to an input C - style string
 {
-	std::string test;
-	std::getline(std::cin, test);
-	int len = length();
-	char* _test = new char[len +1];
+	static char test[100];
+	std::cin.getline(test, 100);
+	int len = strlen(test);
+	char* _test = new char[len+1];
 	
-	for (int i = 0; i <= len;  i++)
+	for (int i = 0; i < len;  i++)
 	{
 		_test[i] = test[i];
 	}

@@ -57,6 +57,21 @@ void Player::nextRoom(int col, int row, std::vector<Room*> m_map)
 		std::cout << (m_map.at(vectorIndex)->enterText())->getString() << std::endl;
 	}
 }
+
+int Player::currentRoom(std::vector<Room*> m_map)
+{
+	int vectorIndex = -1;
+	for (unsigned int i = 0; i < m_map.size(); i++)
+	{
+		if ((m_map.at(i))->m_xCoord == m_Col && (m_map.at(i))->m_yCoord == m_Row)
+		{
+			//found a match
+			vectorIndex = i;
+			break;
+		}
+	}
+	return vectorIndex;
+}
 //void getLocation(Map m)
 //{
 //	unsigned int getLoc = -1;
@@ -88,25 +103,22 @@ void Player::move(Map map)
 	char userInput[50];
 
 	String input1 = ("North");
-	String input2 = ("East");
-	String input3 = ("South");
-	String input4 = ("West");
-	cin >> userInput;
-	if (input1.compare(userInput) == 0)
+	input1.setString();
+	if (input1.lowerCase().compare("north"))
 	{
 		//	if ((map.pointerToVect()).at(FindRoom(map.pointerToVect())).allowMoveNorth() == true)
 		nextRoom((getCoordX()), (getCoordY() + 1), map.pointerToVect());
 	}
-	if (input2.compare(userInput) == 0)
+	if (input1.lowerCase().compare("east"))
 	{
 		nextRoom((getCoordX() + 1), (getCoordY()), map.pointerToVect());
 		//map.pointerToVect()[Map::MapName::PUZZLE1]->Puzzle();
 	}
-	if (input3.compare(userInput) == 0)
+	if (input1.lowerCase().compare("south"))
 	{
 		nextRoom((getCoordX()), (getCoordY() - 1), map.pointerToVect());
 	}
-	if (input4.compare(userInput) == 0)
+	if (input1.lowerCase().compare("west"))
 	{
 		nextRoom((getCoordX() - 1), (getCoordY()), map.pointerToVect());
 	}
@@ -124,7 +136,7 @@ void Player::attack(Character & target)
 		cout << "what would you like to do, Attack\n";
 		cout << " DELETE THIS SOON you will automaticly dodge if enemy attack is less than 14\n";
 		cin >> action;
-		if (input1.compare(action) == 0)
+		if (input1.compare(action))
 			{
 				target.Damage(temp2);
 				cout << "\nPlayer's attack did " << temp2 << " " << " damage" << '\n';

@@ -48,7 +48,6 @@
     <ClInclude Include="Room.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="StartRoom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -65,12 +64,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SecondPuzzleRoom.h">
-=======
-    <ClInclude Include="startRoom.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="puzzleRoom1.h">
->>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -105,7 +98,6 @@
     <ClCompile Include="Room.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-<<<<<<< HEAD
     <ClCompile Include="StartRoom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -122,12 +114,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SecondPuzzleRoom.cpp">
-=======
-    <ClCompile Include="startRoom.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="puzzleRoom1.cpp">
->>>>>>> 4b066a34e51bbf364627a58ab02a098bec47653b
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
